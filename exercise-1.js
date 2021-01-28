@@ -50,36 +50,17 @@ function canVote(age) {
 const ableToVote = canVote(18);
 console.log(ableToVote);
 
-
-
-
-
-
-
 /************************************************************************************/
 // Write a function that converts a string to an array. It should return an array.  
 
 //your code...
-const firstName = "Ylldes";
-const job = "journalist";
-const birthYear = "1996";
-const year = 2020;
-
-const ylldesNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}`;
-console.log(ylldesNew);
-
-console.log(`Just a regular string...`);
 
 function strToArr() {
-    let str = "";
-
-    return [];
+    const string = "coffee";
+    const arr = string.split();
+    return arr;
 }
-
-
-
-
-
+console.log(strToArr());
 
 /************************************************************************************/
 // Write a function that reverses your telephone number.  It should return the reversed telephone number.
@@ -95,14 +76,17 @@ console.log(reversePhone(1234567));
 // Write a function that returns a car object using some given info about your car. Required inputs are the make, model, year, and color.
 
 //your code...
-let myCar = new Object();
+/* let myCar = new Object();
 myCar.make = 'Hyundai';
 myCar.model = 'Sonata';
 myCar.year = 2018;
 myCar.color = 'Silver';
 
-function
-
+function myCar(color) {
+    let color = red;
+    return red;
+}
+console.log(myCar);
 
 
 
