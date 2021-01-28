@@ -91,13 +91,17 @@ function reversePhone(phone) {
 }
 console.log(reversePhone(1234567));
 
-
 /************************************************************************************/
 // Write a function that returns a car object using some given info about your car. Required inputs are the make, model, year, and color.
 
 //your code...
+let myCar = new Object();
+myCar.make = 'Hyundai';
+myCar.model = 'Sonata';
+myCar.year = 2018;
+myCar.color = 'Silver';
 
-
+function
 
 
 
