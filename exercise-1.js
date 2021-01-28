@@ -60,10 +60,21 @@ console.log(ableToVote);
 // Write a function that converts a string to an array. It should return an array.  
 
 //your code...
+const firstName = "Ylldes";
+const job = "journalist";
+const birthYear = "1996";
+const year = 2020;
+
+const ylldesNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}`;
+console.log(ylldesNew);
+
+console.log(`Just a regular string...`);
+
 function strToArr() {
+    let str = "";
+
     return [];
 }
-
 
 
 
@@ -74,12 +85,11 @@ function strToArr() {
 // Write a function that reverses your telephone number.  It should return the reversed telephone number.
 
 //your code...
-function reversePhone(number) {
-
+function reversePhone(phone) {
+    phone = phone + "";
+    return phone.split("").reverse().join("");
 }
-
-
-
+console.log(reversePhone(1234567));
 
 
 /************************************************************************************/
