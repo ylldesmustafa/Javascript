@@ -76,17 +76,17 @@ console.log(reversePhone(1234567));
 // Write a function that returns a car object using some given info about your car. Required inputs are the make, model, year, and color.
 
 //your code...
-/* let myCar = new Object();
-myCar.make = 'Hyundai';
-myCar.model = 'Sonata';
-myCar.year = 2018;
-myCar.color = 'Silver';
+let myCar = {
+    make: 'Hyundai',
+    model: 'Sonata',
+    year: 2018,
+    color: 'Silver'
+};
 
-function myCar(color) {
-    let color = red;
-    return red;
-}
-console.log(myCar);
+function car() {
+    console.log(myCar);
+};
+car();
 
 
 
@@ -96,6 +96,20 @@ console.log(myCar);
 //example : [10,23,3,4] => function() => {10 : 'even', 23 : 'odd', 3 : 'odd', 4 : 'even'}
 
 //your code...
+function evenOdd(arr) {
+    let evenOddNumber = {};
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 == 0) {
+            //console.log(arr[i] + " : " + "odd");
+            evenOddNumber[arr[i]] = "even";
+        } else {
+            //console.log(arr[i] + " : " + odd);
+            evenOddNumber[arr[i]] = "odd";
+        }
+    }
+    return evenOddNumber;
+}
+console.log(evenOdd([1, 2, 3, 4, 5, 6]));
 
 
 
@@ -187,7 +201,7 @@ if (day === "monday") {
 
 
 /************************************************************* */
-// Refactor the following statements to use ternary expressions:
+// Refactor the following statements to use ternary expressions: call Anu
 
 const age = 10;
 if (age > 21) console.log("adult"); else {
