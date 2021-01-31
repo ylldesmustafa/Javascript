@@ -121,7 +121,6 @@ for (let i = 0; i < numbers.length; i += 3) {
     console.log(numbers[i]);
 }
 
-
 /************************************************************************************/
 const foodArray = ['potatoes', 'tamales', 'lemon', 'strawberries', 'chocolate', 'pudding', { program: 'TEKcamp' }];
 //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
@@ -137,14 +136,15 @@ const adjectiveArray = ['salty', 'spicy', 'sour', 'sweet', 'rich', 'creamy', 'am
 /************************************************************* */
 // Refactor the for() loop to be a while loop.
 
-
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 20; i++) {
     // console.log(" the value of i in the loop is : " + i);
 }
-
-
 //your code...
-
+let i = 0;
+while (i < 20) {
+    console.log(" the value of i in loop is : " + i);
+    i++;
+}
 
 
 
