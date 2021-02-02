@@ -4,7 +4,19 @@
 // Write a JavaScript function that iterates the integers from 1 to 100. For multiples of 3 print "TEK" instead of the number and for multiples of 5, print "camp." For numbers that are multiples of both 3 and 5, print "TEKcamp."
 
 //your code...
-function tekCamp() { }
+function tekCamp() {
+    for (let i = 1; i < 100; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            console.log("TEKcamp");
+        } else if (i % 3 == 0) {
+            console.log("TEK");
+        } else if (i % 5 == 0) {
+            console.log("camp");
+        } else {
+            console.log(i);
+        }
+    }
+}
 // tekCamp();
 
 
@@ -32,9 +44,6 @@ function celsiusFarenheit(celsius) {
     console.log(farTemp);
 }
 celsiusFarenheit(10);
-
-
-
 
 
 /************************************************************************************/
@@ -88,8 +97,6 @@ function car() {
 };
 car();
 
-
-
 /************************************************************************************/
 // Write a function that accepts a list of numbers.  The function should identify each number as being even or odd.  The function should output a set of key value pairs, with the key being the number, and the value being the string "even" or "odd".
 
@@ -99,17 +106,17 @@ car();
 function evenOdd(arr) {
     let evenOddNumber = {};
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 == 0) {
-            //console.log(arr[i] + " : " + "odd");
+        if (arr[i] % 2 === 0) {
+            // console.log(arr[i] + " : " + "even");
             evenOddNumber[arr[i]] = "even";
         } else {
-            //console.log(arr[i] + " : " + odd);
+            // console.log(arr[i] + " : " + "odd");
             evenOddNumber[arr[i]] = "odd";
         }
     }
     return evenOddNumber;
 }
-console.log(evenOdd([1, 2, 3, 4, 5, 6]));
+console.log(evenOdd([10, 23, 3, 4, 5, 6]));
 
 
 /************************************************************************************/
@@ -125,13 +132,33 @@ for (let i = 0; i < numbers.length; i += 3) {
 const foodArray = ['potatoes', 'tamales', 'lemon', 'strawberries', 'chocolate', 'pudding', { program: 'TEKcamp' }];
 //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
 
-foodArray[5] = "school";
-console.log(foodArray[5]);
+function getSchool() {
+    let school = foodArray.slice(-1)[0];
+    console.log(school);
+}
+// YLLDES
+// access.School();
+
+//foodArray[5] = "school";
+//console.log(foodArray[5]);
 
 
 const adjectiveArray = ['salty', 'spicy', 'sour', 'sweet', 'rich', 'creamy', 'amazing'];
 // Using both the foodArray and the adjectiveArray, write "for" loop that console.log()'s a sentence for each corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  i.e. "Potatoes are salty", "Lemon is sour".
 
+function foodAdj(arr1, arr2) {
+    let adjectiveOne = foodArray.slice(0, 7);
+    let adjectiveTwo = adjectiveArray.slice(0, 7);
+    for (let i = 0; i <= arr1.length - 2; i++) {
+        if ((arr1[i]).includes('s')) {
+            console.log(`${arr1[i]} are ${arr2[i]}`);
+        } else {
+            console.log(`${adjectiveOne.program} is ${adjectiveTwo}`);
+        }
+    }
+}
+
+foodAdj(foodArray, adjectiveArray);
 
 /************************************************************* */
 // Refactor the for() loop to be a while loop.
@@ -145,8 +172,6 @@ while (i < 20) {
     console.log(" the value of i in loop is : " + i);
     i++;
 }
-
-
 
 /************************************************************* */
 //Multiply the sum of 30 added to two by 20.  Divide the product by 10 raised to the power of 2
@@ -173,6 +198,41 @@ while (i < 20) {
 // undefined
 // ""
 
+//function checkTruthyFalsy(value) {return value ? console.log("truthy") : console.log("falsy");}
+
+function checkTruthyFalsy(value) {
+    if (value) {
+        console.log("truthy");
+    } else {
+        console.log("falsy");
+    }
+}
+
+checkTruthyFalsy(20);
+
+checkTruthyFalsy(0);
+
+checkTruthyFalsy("zero");
+
+const zero0 = 20;
+checkTruthyFalsy("zer0");
+
+checkTruthyFalsy(null);
+
+checkTruthyFalsy("0");
+
+checkTruthyFalsy("!");
+
+checkTruthyFalsy(125);
+
+checkTruthyFalsy({});
+
+// checkTruthyFalsy() => { console.log("hello TEKcamp!") };
+
+checkTruthyFalsy(undefined);
+
+checkTruthyFalsy("");
+
 
 
 
@@ -195,6 +255,11 @@ if (day === "monday") {
     console.log("It's a weekend!")
 }
 
+/* switch (new Date(), getDay()) {
+    case 0:
+        day = "Monday"
+    default:
+        text: } */
 
 
 /************************************************************* */
@@ -334,9 +399,12 @@ const ones = [1, 11, 111, 1111, 11111, 111111, 1111111, 11111111, 111111111, 111
 /************************************************************* */
 //create a function called performer(cb) that takes in a callback function and runs that callback function.  The function should return the output of the callback function.
 
-function performer(cb) {
-    //code goes here
-}
+//YLLDES
+// function performer(cb) {
+//  const cb = function (n) { return n % 2 === 0 };
+// [1, 2, 3, 4].filter(cb);
+//     (2)[2.4]
+// }
 
 
 /************************************************************* */
