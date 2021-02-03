@@ -1,21 +1,38 @@
+// console.log("time to start the timer!");
+
+
+// total amount of time 
+const startingTime = 5;
+//minutes * seconds 
+let time = startingTime * 60;
+
+//timer component: id = main id
+const timerElement = document.getElementById('timer');
+
+//calls the function every second
+const intervalID = setInterval(updateTimer, 1000);
+
+//function to update timer every second
+function updateTimer() {
+  //calculate the remaining time in minutes and seconds
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  timerElement.innerHTML = `${minutes}: ${seconds}`;
+  //decreases time 
+  time--;
+}
+function test() {
+  console.log("clicked");
+}
+
+const startButton = document.querySelector('#start');
+console.log(startButton);
+
+const stopButton = document.querySelector('#stop');
+console.log(stopButton);
+
+const resetButton = document.querySelector('#reset');
+console.log(resetButton);
+
 console.log("time to start the timer!");
-
-const countDownToChristmas = new Date("December 25, 2021 23:59:59").getTime();
-
-let secondUpdateFunction = setInterval(function () {
-
-  let now = new Date().getTime();
-  let timeleft = countDownToChristmas - now;
-
-  const days = Math.floor(timeleft / (327 * 60 * 60 * 24));
-  const hours = Math.floor((timeleft % (327 * 60 * 60 * 24)) / (327 * 60 * 60));
-  const minutes = Math.floor((timeleft % 327 * 60 * 60)) / (327 * 60);
-  const seconds = Math.floor((timeleft % (327 * 60)) / 327);
-
-  document.getElementById('days').innerHTML = days + "d "
-  document.getElementById('hours').innerHTML = days + "h "
-  document.getElementById('minutes').innerHTML = days + "m "
-  document.getElementById('seconds').innerHTML = days + "s "
-
-}, 327)
-
