@@ -322,15 +322,19 @@ const person = {
     age: 24,
     gender: "female",
     healthy: "sometimes",
-    hobbies: ["reading", "working out", "spending time with family"]
-    profession: "coder in training"
-    education: "Masters Degree"
+    hobbies: ["reading", "working out", "spending time with family"],
+    profession: "coder in training",
+    education: "Masters Degree",
     learn: function () {
         return (this.name + " is learning JavaScript.");
-    }
-
+    },
+    education: function () {
+        return "I received my " + this.education[0] + ".";
+    },
 }
 
+person.learn();
+console.log(person.education());
 
 /************************************************************* */
 
@@ -343,17 +347,20 @@ const person = {
 
     //Refactor the following statements into expressions
 
-
     // 1.
     if (year > 2000 && year < 2100) {
         console.log("welcome to the 21st century");
     }
+
+    year > 2000 && year < 2100 ? console.log("welcome to the 21st century") : "";
 
     // 2.
     for (let i = 0; i < nums.length; i++) {
         sum += nums[i];
     }
     console.log(sum);
+
+    console.log(nums.reduce((a, b) => a + b, 0));
 
 
     // 3.
@@ -362,6 +369,9 @@ const person = {
         i++;
     }
 
+    console.log(doubled);
+
+    nums.forEach((x) => doubled.push(x * 2));
     console.log(doubled);
 }
 
