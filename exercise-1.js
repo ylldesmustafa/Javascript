@@ -17,9 +17,7 @@ function tekCamp() {
         }
     }
 }
-// tekCamp();
-
-
+tekCamp();
 
 /************************************************************************************/
 //Write a function that converts the current temperature from Fahrenheit to Celsius. 
@@ -32,8 +30,6 @@ function farenheitCelsius(farenheit) {
 }
 farenheitCelsius(50);
 
-
-
 /************************************************************************************/
 //Write a function that converts the Celsius temperature back to Fahrenheit. 
 
@@ -44,7 +40,6 @@ function celsiusFarenheit(celsius) {
     console.log(farTemp);
 }
 celsiusFarenheit(10);
-
 
 /************************************************************************************/
 // Write a function to determine if someone is old enough to vote.  The function should return a boolean of true or false.
@@ -132,15 +127,15 @@ for (let i = 0; i < numbers.length; i += 3) {
 const foodArray = ['potatoes', 'tamales', 'lemon', 'strawberries', 'chocolate', 'pudding', { program: 'TEKcamp' }];
 //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
 
-function getSchool() {
-    let school = foodArray.slice(-1)[0];
-    console.log(school);
-}
+// function getSchool() {
+//     let school = foodArray.slice(-1)[0];
+//     console.log(school);
+// }
 // YLLDES
 // access.School();
 
-//foodArray[5] = "school";
-//console.log(foodArray[5]);
+foodArray[5] = "school";
+console.log(foodArray[5]);
 
 
 const adjectiveArray = ['salty', 'spicy', 'sour', 'sweet', 'rich', 'creamy', 'amazing'];
@@ -169,7 +164,7 @@ for (let i = 0; i < 20; i++) {
 //your code...
 let i = 0;
 while (i < 20) {
-    console.log(" the value of i in loop is : " + i);
+    console.log(" the value of i in the loop is : " + i);
     i++;
 }
 
@@ -178,7 +173,14 @@ while (i < 20) {
 //use javascript to compute the value of the above statement. Each individual operation needs to be a function expression. run all the functions after defining them, and print the answer to the console.
 
 //your code...
+function equationOne() {
+    return (30 + 2) * 20;
+}
 
+function equationTwo(product) {
+    return (product / 10) ** 2;
+}
+console.log(equationTwo(equationOne()));
 
 /************************************************************* */
 //Determine whether the following values are "truthy" or "falsy".  console.log() the value, whether the value is 'truthy' or 'falsy', along with your reasoning why using String interpolation values : 
@@ -227,14 +229,13 @@ checkTruthyFalsy(125);
 
 checkTruthyFalsy({});
 
-// checkTruthyFalsy() => { console.log("hello TEKcamp!") };
+checkTruthyFalsy(() => {
+    console.log("hello TEKcamp!");
+});
 
 checkTruthyFalsy(undefined);
 
 checkTruthyFalsy("");
-
-
-
 
 /************************************************************* */
 // Refactor the following code using a switch statement:
@@ -255,29 +256,48 @@ if (day === "monday") {
     console.log("It's a weekend!")
 }
 
-/* switch (new Date(), getDay()) {
-    case 0:
-        day = "Monday"
-    default:
-        text: } */
+const newDay = "Friday";
+switch (newDay) {
+    case "Monday":
+        console.log("We got a long week ahead of us...");
 
+    case "Tuesday":
+        console.log("Tuesday's are still beterr than mondays, but LONG way to go still");
+
+    case "Wednesday":
+        console.log("We are smack dab in the middle of the week");
+
+    case "Thursday":
+        console.log("Thursday night... the mood is right");
+
+    case "Friday":
+        console.log("TGIF.  Friday truly is the best day of the week!");
+
+    default: console.log("It's a weekend!");
+}
 
 /************************************************************* */
-// Refactor the following statements to use ternary expressions: call Anu
+// Refactor the following statements to use ternary expressions
 
-const age = 10;
-if (age > 21) console.log("adult"); else {
-    console.log("minor");
-}
+// const age = 10;
+// if (age > 21) console.log("adult"); else {
+//     console.log("minor");
+// }
 
-if (age > 13 && age < 19) console.log('teen'); else {
-    console.log("not a teenager");
-};
+// if (age > 13 && age < 19) console.log('teen'); else {
+//     console.log("not a teenager");
+// };
 
-if (age > 65) console.log("retired"); else {
-    console.log("still working...");
-}
+// if (age > 65) console.log("retired"); else {
+//     console.log("still working...");
+// }
 
+let theAge = 10;
+console.log(theAge > 21 ? "adult" : "minor");
+
+console.log(theAge > 13 && age < 19 ? "teen" : "not a teenager");
+
+console.log(theAge > 65 ? "retired" : "still working");
 
 /************************************************************* */
 //Create an object literal representing yourself.  Set it equal to a variable that appropriately describes the object.  Include the following properties:
@@ -297,6 +317,19 @@ if (age > 65) console.log("retired"); else {
 
 //your code...
 
+const person = {
+    name: "Ylldes",
+    age: 24,
+    gender: "female",
+    healthy: "sometimes",
+    hobbies: ["reading", "working out", "spending time with family"]
+    profession: "coder in training"
+    education: "Masters Degree"
+    learn: function () {
+        return (this.name + " is learning JavaScript.");
+    }
+
+}
 
 
 /************************************************************* */
