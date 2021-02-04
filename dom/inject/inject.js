@@ -67,18 +67,19 @@ const paraTwo = document.createElement('p');
 const node6 = document.createTextNode("My instructor's email address is: ");
 const link2 = document.createElement('a');
 link2.href = "mailto:ayunas@teksystems.com";
+const link2Node = document.createTextNode('ayunas@teksystems.com');
+injectDoc.appendChild(paraTwo);
 horizontalLine.appendChild(paraTwo);
 paraTwo.appendChild(node6);
 paraTwo.appendChild(link2);
+paraTwo.appendChild(link2Node);
 
 //h1
 const bottomHeader = document.createElement('h1');
-//const i = document.createElement('i');
 const node7 = document.createTextNode('Have a great day!');
-bottomHeader.appendChild(node7);
-
-//<p3>
 const paraThree = document.createElement('p');
-const node8 = document.createTextNode("I really look forward to learning how to code! Have a great day. -[Team 'Git'er Done'] ");
-paraTwo.appendChild(paraThree);
+const node8 = document.createTextNode("I really look forward to learning how to code!  Have a great day. -[Team 'Git'er Done']");
+injectDoc.appendChild(bottomHeader);
+bottomHeader.appendChild(node7);
+bottomHeader.appendChild(paraThree);
 paraThree.appendChild(node8);
