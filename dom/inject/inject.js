@@ -28,7 +28,7 @@ horizontalLine.setAttribute("width", "1200px");
 document.body.appendChild(horizontalLine);
 
 // <p1>
-const paraOne = document.createElement('p1');
+const paraOne = document.createElement('p');
 const node3 = document.createTextNode("I love ");
 const node4 = document.createTextNode("HTML");
 const node5 = document.createTextNode(" for the following reasons: ");
@@ -63,22 +63,22 @@ horizontalLine.setAttribute("width", "1200px");
 document.body.appendChild(horizontalLine);
 
 //<p2>,
-const paraTwo = document.createElement('p2');
+const paraTwo = document.createElement('p');
 const node6 = document.createTextNode("My instructor's email address is: ");
-const link2 = document.createElement('a2');
+const link2 = document.createElement('a');
 link2.href = "mailto:ayunas@teksystems.com";
 horizontalLine.appendChild(paraTwo);
 paraTwo.appendChild(node6);
 paraTwo.appendChild(link2);
 
-// //h1
-// const h1 = document.createElement('h1');
-// //const i = document.createElement('i');
-// const node7 = document.createTextNode('Have a great day!');
-// h1.appendChild(node7);
+//h1
+const bottomHeader = document.createElement('h1');
+//const i = document.createElement('i');
+const node7 = document.createTextNode('Have a great day!');
+bottomHeader.appendChild(node7);
 
 //<p3>
-const paraThree = document.createElement('p3');
+const paraThree = document.createElement('p');
 const node8 = document.createTextNode("I really look forward to learning how to code! Have a great day. -[Team 'Git'er Done'] ");
 paraTwo.appendChild(paraThree);
 paraThree.appendChild(node8);
