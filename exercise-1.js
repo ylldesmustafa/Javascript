@@ -609,9 +609,16 @@ devs.forEach((dev) => {
 // Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.  
 const numbersMixed = [2, 23, 1, 2, 1, 1, 1, 2, 2.5, 20, 200, 2000, , { k: "val" }, 20000, 19999, 1878, 140, 23, 4, "sk", true, true, "true-dat", "nice", "one", "two", "three", "3", "tea", []];
 
-function maxNumber(numbers) {
-    //your code...
-}
+// function maxNumber(numbers) {
+//     //your code...
+//     if (toString.call(numbers) !== "[Array]")
+//         return false;
+//     return Math.max.apply(null, numbers);
+// }
+// console.log(maxNumber([numbersMixed]));
+
+console.log(Math.max(2, 23, 1, 2, 1, 1, 1, 2, 2.5, 20, 200, 2000));
+//numbersMixed = numbersMixed.replace(/[^0-9]/g, '');
 
 //After the numbers array has been cleaned up to only have numbers in it, Write a function that sorts the modified numbers array.  Allow the function to sort the array in descending order as well.
 
@@ -660,17 +667,32 @@ function doMath(x, y) { };
 //- Create a Higher Order Function called multiple(x) that takes a single parameter.  This HOF should return another function fn(y) that accepts another single parameter y.  This inner function should compute the product of it's parameter with the parameter passed into multiple.  Use this returned "first-class" function to compute triples of any given number.
 
 //your code...
-
+const HighOrderFunction = function multiple(x) {
+    return function fn(y) {
+        return (x * y);
+    };
+};
+console.log(HighOrderFunction(3)(6));
+console.log(HighOrderFunction(3)(9));
 
 //- Write an outer function called stockGain that has cost basis (basis) as a parameter; declare a variable called message that holds " is how much the stock has increased".  Return an inner function with years (yrs) as a parameter and declare a variable for growth rate (r) of 5%. Console log your calculation.
 
 //your code
-
+const stockGain = (basis) => {
+    const message = " is how much the stock has increased.";
+    const innerFunction = (yrs) => {
+        const r = 5;
+        return r ** yrs;
+    };
+    console.log(basis * innerFunction(0.05) - basis + message);
+    return basis * innerFunction(0.05);
+};
 
 // Once finished, declare a variable called futureValue that holds your stockGain function and enter any amount for the cost basis and a number for the number of years.  Run the function returned by the higher order function to display the future value of the stock.  
 
 //your code...
-
+const futureValue = stockGain(5);
+console.log("The future value of the stock is ", futureValue);
 
 
 // DO NOT DELETE THIS EXPORT
