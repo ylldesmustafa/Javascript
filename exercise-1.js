@@ -412,13 +412,9 @@ console.log(newPlusArray);
 
 //your code...
 
-const integerArray
-
-
-
 const showNums = [12, 22, 33, 44, 55, 66, 77, 88, 99, 101];
 //Print out the value of each number divided by 2.  There is no need to store the output in an array.
-
+showNums.forEach((x) => console.log(x / 2));
 
 
 /************************************************************* */
@@ -434,6 +430,8 @@ ex : ['iPhone','queen','pawn'] => chessCalc() => 10
 ['android'] => chessCalc() => null
  
 */
+const chessPieces = ["king", "queen", "pawn", "bishop",]
+
 
 function chessCalc(pieces) {
     //your code here
@@ -447,12 +445,13 @@ function chessCalc(pieces) {
 const ones = [1, 11, 111, 1111, 11111, 111111, 1111111, 11111111, 111111111, 1111111111];
 //reverse the array, without modifying / `mutating` the ones array.
 
-
+ones.reverse();
+console.log(ones);
 
 /************************************************************* */
 //create a function called performer(cb) that takes in a callback function and runs that callback function.  The function should return the output of the callback function.
 
-//YLLDES
+
 // function performer(cb) {
 //  const cb = function (n) { return n % 2 === 0 };
 // [1, 2, 3, 4].filter(cb);
@@ -529,7 +528,12 @@ const devs = [
 // Find all devs older than 24
 
 //your code here...
+const olderThan24Devs = [];
 
+for (let i = 0; i < devs.length; i++) {
+    (devs[i].age > 24) ? olderThan24Devs.push(devs[i]) : "";
+}
+console.log(olderThan24Devs);
 
 
 /************************** */
