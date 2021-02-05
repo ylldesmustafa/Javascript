@@ -611,7 +611,6 @@ const numbersMixed = [2, 23, 1, 2, 1, 1, 1, 2, 2.5, 20, 200, 2000, , { k: "val" 
 
 
 console.log(Math.max(2, 23, 1, 2, 1, 1, 1, 2, 2.5, 20, 200, 2000));
-//numbersMixed = numbersMixed.replace(/[^0-9]/g, '');
 
 //After the numbers array has been cleaned up to only have numbers in it, Write a function that sorts the modified numbers array.  Allow the function to sort the array in descending order as well.
 
@@ -627,7 +626,9 @@ function sortNums(numbers, desc = false) {
 
 //your code...
 
-
+const bookTitle = "Alice in Wonderland";
+const bookAuthor = "Lewis Carroll";
+console.log(`${bookTitle} is written by ${bookAuthor}.`);
 
 /************************************************************* */
 //Add an example of the 5 primary JavaScript data types to the given mapObj.  The key is an example data type, and the value is the name of the data type.  An object data type has already been set as the 1st key / val pair.
