@@ -375,7 +375,6 @@ console.log(person.education());
     console.log(doubled);
 }
 
-
 /************************************************************* */
 // Use array methods to solve the following problems.
 
@@ -383,8 +382,16 @@ const nums = [1, 2, 3, 4, 5];
 // Square every number in the array.  Store the squares in a new array.
 
 //your code...
+function newSquareArr(nums) {
+    newArray = [];
 
-
+    for (let i = 0, len = nums.length; i < len; i++) {
+        newArray.push(nums[i] * nums[i]);
+    }
+    return newArray;
+}
+console.log(nums);
+console.log(newSquareArr(nums));
 
 
 
@@ -393,16 +400,19 @@ const fivePlus = [1, 3, 5, 7, 9, 1, 3, 5, 2, 3, 1, 23, 4, 232, 3, 4, 1, 2, 2, 2,
 
 //your code...
 
-
-
-
-
+const newPlusArray = new Array();
+fivePlus.forEach(function (number) {
+    if (number > 5) {
+        newPlusArray.push(number);
+    }
+});
+console.log(newPlusArray);
 
 // Create an array of 20 randomly generated integers.  Calculate the sum of the elements in the array.
 
 //your code...
 
-
+const integerArray
 
 
 
