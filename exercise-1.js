@@ -540,40 +540,49 @@ console.log(olderThan24Devs);
 // Remove all people who are not developers (i.e. no tech stack)
 
 //your code here...
-
+const notDevelopers = devs.filter((i) => i.tech_stack == null);
+console.log("These people are not developers", notDevelopers);
 
 
 /************************** */
 // Calculate the total age of all the devs
 
 //your code here...
-
+const totalAge = devs.reduce((x, y) => x + y.age, 0);
+console.log("This is the total age of all the developers ", totalAge, ".");
 
 
 /************************** */
 // Find all female devs
 
 //your code here...
-
+const allFemaleDevs = devs.filter((f) => f.gender.toLowerCase() === "f");
+console.log("These are all the female developers", allFemaleDevs);
 
 /************************** */
 // lowercase the genders of every dev
 
 //your code here...
-
-
+const lowercaseDevGenders = devs.filter((l) => l.gender.toLowerCase());
+console.log("These are the lowercased genders of every developer", lowercaseDevGenders);
 
 /************************** */
 // Sort the developers by name
 
 //your code here
-
+// const sortedDevsName = devs.sortfunction(a, b)
+// {
+//     console.log(sortedDevsName);
+// }
 
 /************************** */
 // Sort the devs by age in descending order
 
 //your code here
+// const devsSortedByAge = [];
+// for (let i = 0; i < devs.length; i++) {
 
+// }
 
 
 /************************** */
@@ -592,7 +601,9 @@ Dr. Patel is not a developer.
 */
 
 //your code here
-
+devs.forEach((dev) => {
+    (!dev.tech_stack) ? console.log(dev.name + " isn't a developer") : console.log(dev.name + " specializes in " + (dev.tech_stack));
+});
 
 /************************************************************* */
 // Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.  
