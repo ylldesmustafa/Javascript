@@ -609,13 +609,6 @@ devs.forEach((dev) => {
 // Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.  
 const numbersMixed = [2, 23, 1, 2, 1, 1, 1, 2, 2.5, 20, 200, 2000, , { k: "val" }, 20000, 19999, 1878, 140, 23, 4, "sk", true, true, "true-dat", "nice", "one", "two", "three", "3", "tea", []];
 
-// function maxNumber(numbers) {
-//     //your code...
-//     if (toString.call(numbers) !== "[Array]")
-//         return false;
-//     return Math.max.apply(null, numbers);
-// }
-// console.log(maxNumber([numbersMixed]));
 
 console.log(Math.max(2, 23, 1, 2, 1, 1, 1, 2, 2.5, 20, 200, 2000));
 //numbersMixed = numbersMixed.replace(/[^0-9]/g, '');
@@ -642,26 +635,40 @@ function sortNums(numbers, desc = false) {
 const mapObj = new Map();
 mapObj.set({ company: "TEKsystems" }, "object");
 
+const keyDataType = {
+    company: "TEKsystems"
+};
+mapObj.set(keyDataType, "object");
+mapObj.set([1, 2, 3], "array")
+mapObj.set("Cat", "String");
+mapObj.set(true, "boolean");
+mapObj.set(5, "int");
+console.log(mapObj);
 console.log(mapObj.has({ company: "TEKsystems" }));
 
 //The above console.log() statmeent returns false.  Write another console.log() statement explaining why this line of code prints false.  Refactor the code `mapObj.set()`, so the code : `mapObj.has() returns true.  The goal is to successfully check and see if {company : "TEKsystems"} exists in the mapObj.
 
 //your code...
-
+console.log("the code prints false because the object is not in an object.")
 
 //loop through the mapObj and create a new array of only the data types, leaving out the example keys of the mapObj.  Use array methods to do this.  Example output : ['string',number','boolean',array','object']
+const dataArray = [];
 
-
+const dataLoop = mapObj.values();
+for (let i = 0; i < mapObj.size; i++) {
+    dataArray.push(dataLoop.next().value);
+}
+console.log(dataArray);
 /************************************************************* */
 //Create 4 mathematical function expressions, add,subtract,multiply,divide.  put them in an array, and create a doMath() function that randomly selects one of the mathematical operations whenever it is invoked.  The doMath() function should print to the console the mathetmatical function that was carried out.  The doMath() function should return the computed value of any operation performed.
 
 // ex : 2,3 => doMath(2,3) => adding : 5
 const operations = [];
-function doMath(x, y) { };
-
-//your code...
-
-
+function doMath(x, y) {
+    const mathOperations = Math.floor(Math.random() * mathExpressions.length);
+    console.log(mathExpressions[mathOperations]);
+    return mathExpressions[mathOperations](x, y);
+};
 
 /************************************************************* */
 //- Create a Higher Order Function called multiple(x) that takes a single parameter.  This HOF should return another function fn(y) that accepts another single parameter y.  This inner function should compute the product of it's parameter with the parameter passed into multiple.  Use this returned "first-class" function to compute triples of any given number.
