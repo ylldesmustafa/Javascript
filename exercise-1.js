@@ -432,13 +432,27 @@ ex : ['iPhone','queen','pawn'] => chessCalc() => 10
 */
 const chessPieces = ["king", "queen", "pawn", "bishop",]
 
-
 function chessCalc(pieces) {
     //your code here
+    let score = 0;
+    for (let i = 0; i < pieces.length; i++) {
+        switch (pieces[i]) {
+            case "pawn":
+                score++;
+                break;
+            case "bishop":
+                score += 3;
+                break;
+            case "queen":
+                score += 9;
+                break;
+            default:
+                break;
+        }
+    }
+    return score;
 }
-
-
-
+console.log(chessCalc(chessPieces));
 
 /************************************************************* */
 
@@ -450,13 +464,6 @@ console.log(ones);
 
 /************************************************************* */
 //create a function called performer(cb) that takes in a callback function and runs that callback function.  The function should return the output of the callback function.
-
-
-// function performer(cb) {
-//  const cb = function (n) { return n % 2 === 0 };
-// [1, 2, 3, 4].filter(cb);
-//     (2)[2.4]
-// }
 
 
 /************************************************************* */
@@ -570,17 +577,11 @@ console.log("These are the lowercased genders of every developer", lowercaseDevG
 // Sort the developers by name
 
 //your code here
-// const sortedDevsName = devs.sortfunction(a, b)
-// {
-//     console.log(sortedDevsName);
-// }
 
 /************************** */
 // Sort the devs by age in descending order
 
 //your code here
-// const devsSortedByAge = [];
-// for (let i = 0; i < devs.length; i++) {
 
 // }
 
@@ -589,7 +590,18 @@ console.log("These are the lowercased genders of every developer", lowercaseDevG
 // Sort the male coders by age
 
 //your code here
-
+// const maleCoders = [];
+// for (let i = 0; i < devs.length; i++) {
+//     if (devs[i].gender == "m") {
+//         maleCoders.push(devs[i]);
+//     }
+//     for (let i = 0; i < devs.length; i++) {
+//         if (devs[i].age == "nums") {
+//             maleCoders.push(devs[i]);
+//         }
+//     }
+// }
+// console.log(age(maleCoders));
 
 /************************** */
 // For the list of devs, print out sentences including the name and tech stack of each dev, leaving out other information.  Example output is provided below : 
