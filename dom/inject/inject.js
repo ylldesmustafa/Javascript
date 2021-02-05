@@ -57,11 +57,6 @@ itemOne.appendChild(listItem1);
 itemTwo.appendChild(listItem2);
 itemThree.appendChild(listItem3);
 
-// <hr2>
-horizontalLine = document.createElement("hr");
-horizontalLine.setAttribute("width", "1200px");
-document.body.appendChild(horizontalLine);
-
 //<p2>,
 const paraTwo = document.createElement('p');
 const node6 = document.createTextNode("My instructor's email address is: ");
@@ -69,10 +64,9 @@ const link2 = document.createElement('a');
 link2.href = "mailto:ayunas@teksystems.com";
 const link2Node = document.createTextNode('ayunas@teksystems.com');
 injectDoc.appendChild(paraTwo);
-horizontalLine.appendChild(paraTwo);
 paraTwo.appendChild(node6);
 paraTwo.appendChild(link2);
-paraTwo.appendChild(link2Node);
+link2.appendChild(link2Node);
 
 //h1
 const bottomHeader = document.createElement('h1');
@@ -81,5 +75,5 @@ const paraThree = document.createElement('p');
 const node8 = document.createTextNode("I really look forward to learning how to code!  Have a great day. -[Team 'Git'er Done']");
 injectDoc.appendChild(bottomHeader);
 bottomHeader.appendChild(node7);
-bottomHeader.appendChild(paraThree);
+injectDoc.appendChild(paraThree);
 paraThree.appendChild(node8);
