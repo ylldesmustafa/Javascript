@@ -411,6 +411,8 @@ console.log(newPlusArray);
 // Create an array of 20 randomly generated integers.  Calculate the sum of the elements in the array.
 
 //your code...
+console.log(Array.from({ length: 20 }, () => Math.floor(Math.random() * 20)));
+
 
 const showNums = [12, 22, 33, 44, 55, 66, 77, 88, 99, 101];
 //Print out the value of each number divided by 2.  There is no need to store the output in an array.
